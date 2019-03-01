@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "python -m SimpleHTTPServer",
+    "start": "browser-sync start --server --files -w",
     "compile:css": "node-sass --output-style compressed ./styles/app.scss ./styles/app.min.css",
     "watch:css": "nodemon --watch ./styles --ext scss --exec \"npm run compile:css\""
   },
@@ -13,6 +13,8 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
+    "@citizensadvice/cads": "^1.0.0-alpha.0",
+    "browser-sync": "^2.26.3",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10"
   }
